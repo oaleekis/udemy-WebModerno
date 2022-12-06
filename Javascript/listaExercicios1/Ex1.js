@@ -1,12 +1,13 @@
 /* Crie uma função que dado dois valores (passados como parâmetros) mostre no console a soma, subtração,
 multiplicação e divisão desses valores. */
 
-function resultadosMatematicos(valor1, valor2){
-    console.log(`A Soma de ${valor1} e ${valor2} é  ${valor1 + valor2}`)
-    console.log(`A Subtração de ${valor1} e ${valor2} é  ${valor1 - valor2}`)
-    console.log(`A Multiplicação de ${valor1} e ${valor2} é  ${valor1 * valor2}`)
-    console.log(`A Divisão de ${valor1} e ${valor2} é  ${valor1 / valor2}`)
-    
+function resultados(valor1, valor2){
+
+    console.log(`A soma de ${valor1} com ${valor2} é ${valor1 + valor2}`);
+    console.log(`A subtração de ${valor1} com ${valor2} é ${valor1 - valor2}`);
+    console.log(`A multiplicação de ${valor1} com ${valor2} é ${valor1 * valor2}`);
+    console.log(`A divisão de ${valor1} com ${valor2} é ${valor1 / valor2}`);
 }
 
-resultadosMatematicos(10, 5)
+
+resultados(2, 2)

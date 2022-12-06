@@ -10,3 +10,32 @@ Exemplo:
 String: “10 20 20 8 25 3 0 30 1”
 Retorno: [3, 7] (Significa que ele bateu três vezes seu recorde de melhor pontuação e a pior pontuação
 aconteceu no sétimo jogo.)*/
+
+
+let stringPontuacoes = "10 20 20 8 25 3 0 30 1"
+
+
+function pontosBasquete (stringPontuacoes){
+    let pontos = stringPontuacoes.split(' ').map(function(item) {
+        return parseInt(item, 10)})
+    console.log(pontos)
+    let quebrouRecord = 0
+    let piorJogo = 1
+    let maiorPonto = pontos[0]
+    let menorPonto = pontos[0]
+
+    for(let i = 1; i < pontos.length; i++){
+        if(pontos[i] > maiorPonto ){
+            maiorPonto = pontos[i]
+            quebrouRecord++
+        }else if(pontos[i] < menorPonto){
+            menorPonto = pontos[i]
+            piorJogo = i + 1
+        }
+    }
+
+    return [quebrouRecord, piorJogo]
+
+}
+
+console.log(pontosBasquete(stringPontuacoes))

@@ -4,16 +4,20 @@ retornará o valor da aplicação sob o regime de juros compostos. */
 
 
 function jurosSimples(capital, taxa, tempo){
-    juros = capital * taxa * tempo
-    return  capital + juros
-    
-     
+
+    let juros = capital * taxa * tempo
+     let montante = capital + juros
+     return montante
+
 }
 
-function jurosComposto (capital, taxa, tempo){
-    return  capital * (1 + taxa) ** tempo
-   
+function jurosComposto(capital, taxa, tempo){
+
+     let juros = capital * ((1 + taxa) ** tempo)
+     return juros
+
 }
 
-console.log(jurosSimples(23000, 0.005, 12))
-console.log(jurosComposto(23000, 0.005, 12))
+console.log(jurosSimples(1000, 0.1, 12))
+console.log(jurosComposto(1000, 0.1, 0))
+

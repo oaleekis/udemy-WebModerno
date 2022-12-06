@@ -5,3 +5,18 @@ parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² -
 que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase:
 “Delta é negativo”. */
 
+
+function calcularBhaskara(ax2, bx, c) {
+    let delta = (bx ** 2) - (4 * ax2 * c)
+    console.log(`o deltá é ${delta}`)
+
+    if( delta >= 0){
+        x1 = (- bx + Math.sqrt(delta)) /(2 * ax2) 
+        x2 = (- bx - Math.sqrt(delta)) /(2 * ax2) 
+        console.log(`x1 = ${x1}\nx2 = ${x2}` )
+    }else {
+        console.log('Delta é negativo');
+    }
+}
+
+calcularBhaskara(4, 2, -6)

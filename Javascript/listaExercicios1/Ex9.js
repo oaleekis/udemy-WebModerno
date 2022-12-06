@@ -6,3 +6,23 @@ arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a n
 85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou
 seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40
 e o aluno será aprovado */
+
+
+function classificarAluno(nota){
+    let notaArredondada = arredondar(nota)
+    if(nota >= 38){
+        console.log(`sua notá foi ${notaArredondada} = "Aprovado"`);
+    }else {
+        console.log(`sua notá foi ${notaArredondada} = "Reprovado"`);
+    }
+}
+
+function arredondar (nota) {
+    if (nota % 5 > 2) {
+        return nota + (5 - (nota % 5))
+    } else {
+        return nota
+    }
+}
+
+classificarAluno(48)

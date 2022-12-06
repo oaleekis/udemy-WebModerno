@@ -6,15 +6,15 @@ triângulo) */
 
 
 function classificarTriangulo(lado1, lado2, lado3){
+
     if(lado1 === lado2 && lado2 === lado3){
-        return 'Equilátero'
-    } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3) {     
-        return 'Isósceles'  
-    }else { 
-        return 'Escaleno'
+        console.log('Equilátero')
+    } else if (lado1 === lado2 || lado2 === lado3 || lado1 === lado3){
+        console.log('Isósceles')
+    }else {
+        console.log('Escaleno')
     }
 }
 
-console.log(classificarTriangulo(10, 10, 10))
-console.log(classificarTriangulo(10, 11, 10))
-console.log(classificarTriangulo(10, 9, 8))
+
+classificarTriangulo(1, 2, 3)
