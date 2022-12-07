@@ -5,3 +5,24 @@ De 400 em 400 anos é ano bissexto;
 Prevalecem as últimas regras sobre as primeiras.
 Partindo daí elabore uma função que recebe um ano e calcula se ele é ano bissexto, imprimindo no console a
 mensagem e retornando true ou false. */
+
+function verificaAno(ano) {
+    if (ano <= 0){
+        return false
+    } else if(ano % 400 === 0){
+        return true
+    } else if (ano % 100 === 0){
+        return false
+    } else if(ano % 4 === 0){
+        return true
+    } else {
+        return false
+    }
+    
+}
+
+console.log(verificaAno(400));
+console.log(verificaAno(100));
+console.log(verificaAno(40));
+console.log(verificaAno(4));
+console.log(verificaAno(1));

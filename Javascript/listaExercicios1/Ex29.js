@@ -4,3 +4,20 @@ deste vetor estão no intervalo [10,20] (repare que o intervalo é fechado, ou s
 deles estão fora do intervalo, escrevendo estas informações.
 
 */
+
+function percorrerVetor(vetor) {
+
+    let contador = 0
+
+    for (let i = 0; i < vetor.length; i++) {
+        if(vetor[i] >= 10 && vetor[i] <= 20){
+            contador++
+        }
+    }
+
+    console.log(`Existem ${contador} número(s) nesse vetor, no intervalo de 10, 20`)
+    
+}
+
+
+percorrerVetor([9, 10, 11, 15, 20, 23, 25])
